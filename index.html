@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocExtract — Intelligent Document Section Extraction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header landing-header">
+    <a class="brand" href="index.html"><span class="brand-mark">◆</span> DocExtract</a>
+    <button class="btn btn-outline" id="loginBtn">Login</button>
+  </header>
+
+  <main class="landing">
+    <section class="hero container">
+      <div class="hero-copy">
+        <span class="eyebrow">AI DOCUMENT PROCESSING</span>
+        <h1>Intelligent Document<br>Section Extraction</h1>
+        <p>Upload your documents and automatically identify important sections such as headers, Table of Contents, appendices and more.</p>
+        <a class="btn btn-primary" href="upload.html">Get Started</a>
+      </div>
+
+      <div class="document-illustration" aria-label="Document extraction illustration">
+        <div class="paper">
+          <div class="paper-fold"></div>
+          <i></i><i></i><i></i><i></i>
+        </div>
+        <span class="tag tag-blue">▣ Header</span>
+        <span class="tag tag-green">▤ Table of Contents</span>
+        <span class="tag tag-orange">▤ Appendix</span>
+        <span class="tag tag-purple">▤ Other Sections</span>
+      </div>
+    </section>
+
+    <section class="how container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <article><div class="step-icon">⇧</div><strong>1. Upload File</strong><p>Upload your document in any supported format.</p></article>
+        <span class="arrow">→</span>
+        <article><div class="step-icon">⚙</div><strong>2. Process Document</strong><p>Our AI analyzes and extracts key sections.</p></article>
+        <span class="arrow">→</span>
+        <article><div class="step-icon">◉</div><strong>3. View Results</strong><p>Review and download the extracted sections.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 DocExtract. All rights reserved.</footer>
+
+  <div class="modal-backdrop hidden" id="loginModal">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <button class="modal-close" id="closeLogin">×</button>
+      <h2 id="loginTitle">Welcome Back</h2>
+      <form id="loginForm">
+        <label>Email Address</label>
+        <input id="email" type="email" placeholder="Enter your email" required>
+        <label>Password</label>
+        <div class="password-field"><input id="password" type="password" placeholder="Enter your password" required><button type="button" id="togglePassword">◉</button></div>
+        <div class="login-row"><label class="remember"><input type="checkbox"> Remember me</label><a href="#" onclick="return false">Forgot Password?</a></div>
+        <button class="btn btn-primary full" type="submit">Login</button>
+        <div class="or">or</div>
+        <button class="google-btn" type="button">🌈 &nbsp; Continue with Google</button>
+        <p class="form-error hidden" id="loginError">ⓘ Invalid email or password. Please try again.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

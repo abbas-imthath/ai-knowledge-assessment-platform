@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocExtract — Upload Document</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">◆</span> DocExtract</a>
+    <nav><a class="active" href="upload.html">Upload</a><a href="results.html">My Documents</a></nav>
+    <div class="user-menu"><span class="avatar">JD</span> John Doe <span>⌄</span></div>
+  </header>
+
+  <main class="page container-narrow">
+    <div class="page-title"><div><span class="state-label blue">DEFAULT STATE</span><h1>Upload a Document</h1><p>Select a file or drag and drop it below.</p></div></div>
+
+    <section class="panel" id="dropPanel">
+      <div class="drop-zone" id="dropZone">
+        <div class="upload-cloud">⇧</div>
+        <strong>Drag and drop your file here</strong>
+        <span>or</span>
+        <button class="btn btn-outline" id="browseBtn" type="button">Browse Files</button>
+        <small>Supported formats: PDF, DOCX, DOC<br>Max file size: 100 MB</small>
+        <input id="fileInput" type="file" accept=".pdf,.doc,.docx" hidden>
+      </div>
+    </section>
+
+    <section class="panel hidden" id="selectedPanel">
+      <span class="state-label blue">FILE SELECTED</span>
+      <div class="file-card"><div class="file-icon">PDF</div><div class="file-meta"><strong id="fileName">Sample_Book.pdf</strong><span id="fileSize">12.5 MB</span></div><button class="btn btn-outline small" id="removeBtn">Remove ×</button></div>
+      <button class="btn btn-primary centered" id="uploadBtn">Upload File</button>
+    </section>
+
+    <section class="panel hidden" id="progressPanel">
+      <span class="state-label blue">UPLOAD PROGRESS</span>
+      <div class="file-card"><div class="file-icon">PDF</div><div class="file-meta"><strong id="progressName">Sample_Book.pdf</strong><span>Uploading... <b id="progressText">0%</b></span></div><button class="btn btn-outline small" id="cancelBtn">Cancel</button></div>
+      <div class="progress-row"><div class="progress"><div id="progressBar"></div></div><span id="progressPct">0%</span></div>
+    </section>
+
+    <section class="panel success-panel hidden" id="successPanel">
+      <span class="state-label green">UPLOAD SUCCESS</span>
+      <div class="result-message"><div class="success-icon">✓</div><div><h2>Upload Successful!</h2><p><b id="successName">Sample_Book.pdf</b> uploaded successfully.<br>Your document is ready for processing.</p><a class="btn btn-success" href="results.html">View Extracted Sections</a></div></div>
+    </section>
+
+    <section class="panel error-panel hidden" id="errorPanel">
+      <span class="state-label red">UPLOAD ERROR</span>
+      <div class="result-message"><div class="error-icon">!</div><div><h2>Upload Failed</h2><p>Unable to upload <b id="errorName">Sample_Book.pdf</b>.<br>The file format is not supported or the upload could not be completed.</p><div class="actions"><button class="btn btn-outline danger" id="retryBtn">Try Again</button><button class="btn btn-outline" id="chooseAnotherBtn">Choose Another File</button></div></div></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

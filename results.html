@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DocExtract — Extraction Results</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">◆</span> DocExtract</a>
+    <nav><a href="index.html">Home</a><a href="upload.html">Upload</a><a class="active" href="results.html">My Documents</a></nav>
+    <div class="user-menu"><span class="avatar">JD</span> John Doe <span>⌄</span></div>
+  </header>
+
+  <main class="page container">
+    <a class="back" href="upload.html">← Back to Upload</a>
+    <div class="result-heading"><div><h1>Sample_Book.pdf <span class="badge success">✓ Completed</span></h1><p>Processed on May 24, 2026 · 10:30 AM · 12.5 MB</p></div></div>
+
+    <section class="results-layout">
+      <aside class="sections-panel">
+        <h3>EXTRACTED SECTIONS</h3>
+        <button class="section-item selected" data-section="Header"><span class="section-icon blue-bg">▤</span><span><b>Header</b><small>Extracted</small></span><em>✓</em></button>
+        <button class="section-item" data-section="Table of Contents"><span class="section-icon green-bg">▤</span><span><b>Table of Contents</b><small>Extracted</small></span><em>✓</em></button>
+        <button class="section-item" data-section="Main Content"><span class="section-icon orange-bg">▤</span><span><b>Main Content</b><small>Extracted</small></span><em>✓</em></button>
+        <button class="section-item" data-section="Appendix"><span class="section-icon purple-bg">▤</span><span><b>Appendix</b><small>Extracted</small></span><em>✓</em></button>
+        <button class="section-item other" data-section="Other Sections"><span><b>Other Sections</b></span><span>›</span></button>
+      </aside>
+
+      <section class="preview-panel">
+        <h3>SECTION PREVIEW</h3>
+        <div id="sectionPreview">
+          <h2>Table of Contents</h2>
+          <div class="toc"><div><span>1. Introduction</span><i></i><b>1</b></div><div><span>2. Getting Started</span><i></i><b>5</b></div><div class="indent"><span>2.1 Overview</span><i></i><b>6</b></div><div class="indent"><span>2.2 Installation</span><i></i><b>8</b></div><div><span>3. User Guide</span><i></i><b>12</b></div><div class="indent"><span>3.1 Basic Usage</span><i></i><b>13</b></div><div class="indent"><span>3.2 Advanced Usage</span><i></i><b>18</b></div><div><span>4. Best Practices</span><i></i><b>25</b></div><div><span>5. Conclusion</span><i></i><b>30</b></div><div><span>Appendix A</span><i></i><b>35</b></div><div><span>Appendix B</span><i></i><b>40</b></div></div>
+        </div>
+      </section>
+    </section>
+
+    <div class="bottom-actions"><button class="btn btn-outline" id="reprocessBtn">Reprocess Document</button><button class="btn btn-primary" id="downloadResults">⇩ Download Results</button></div>
+
+    <section class="individual">
+      <div class="individual-title"><h2>INDIVIDUAL SECTION VIEW <small>(EXAMPLE — APPENDIX)</small></h2></div>
+      <div class="section-toolbar">
+        <a class="back" href="results.html">← Back to Sections</a>
+        <div><h1>Appendix <span class="badge light">Extracted</span></h1></div>
+        <button class="btn btn-outline">Download Section ⇩</button>
+      </div>
+      <div class="document-viewer">
+        <aside class="thumbnails"><b>Pages</b><div class="thumb active">page<br>1</div><div class="thumb">page<br>2</div></aside>
+        <div class="viewer-main">
+          <div class="viewer-controls"><span>‹</span><span>1 / 12</span><span>−</span><span>100%</span><span>+</span><span>⌕</span><span>⇩</span><span>↻</span><span>▣</span></div>
+          <article class="document-page"><h1>APPENDIX A</h1><h3>Additional Data and Tables</h3><p>This appendix contains additional data, tables, and reference materials that support the information presented in this document.</p><table><thead><tr><th>Category</th><th>Description</th><th>Value</th></tr></thead><tbody><tr><td>A-1</td><td>Sample Data One</td><td>123</td></tr><tr><td>A-2</td><td>Sample Data Two</td><td>456</td></tr><tr><td>A-3</td><td>Sample Data Three</td><td>789</td></tr></tbody></table></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
